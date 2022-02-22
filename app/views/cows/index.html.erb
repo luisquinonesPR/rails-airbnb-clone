@@ -3,17 +3,15 @@
     <h1>All our wonderful magnificents cows!</h1>
  </div>
 </div>
-<div class="container py-5">
-  <div class="row">
-    <% @cows.each do |cow| %>
+  <div class="container py-5">
+    <div class="row">
+     <% @cows.each do |cow| %>
       <div class="co-12 col-sm-6 col-md-4">
-        <%= link_to cow_path(cow), class: "text-decoration-none" do %>
+       <%= cow.name %>
+        <%= link_to "See details", cow_path(cow), class: "btn btn-primary" %>
           <div class="card-category"  %>
-            <%= cow.name %>
-             <%= user.name %>
-          </div>
-        <% end %>
       </div>
+    </div>
     <% end %>
   </div>
 </div>

@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(version: 2022_02_21_145428) do
   create_table "cows", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.string "image"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
