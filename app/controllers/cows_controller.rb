@@ -4,8 +4,8 @@ class CowsController < ApplicationController
   def index
     @cows = Cow.all
   end
-  
-   def new
+
+  def new
     @cow = Cow.new
   end
 
@@ -18,16 +18,14 @@ class CowsController < ApplicationController
       render :new
     end
   end
-  
+
   def show
   end
-
 
   def destroy
     @cow.destroy
     redirect_to root_path
   end
-
 
   def my_cows
     @cows = current_user.cows
@@ -40,6 +38,6 @@ class CowsController < ApplicationController
   end
 
   def cow_params
-    params.require(:cow).permit(:name, :description)
+    params.require(:cow).permit(:name, :description, :photo)
   end
 end
