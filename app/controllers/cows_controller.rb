@@ -18,6 +18,9 @@ class CowsController < ApplicationController
       render :new
     end
   end
+  
+  def show
+  end
 
 
   def destroy
