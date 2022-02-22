@@ -4,7 +4,7 @@ class CowsController < ApplicationController
   def index
     @cows = Cow.all
   end
-  
+
    def new
     @cow = Cow.new
   end
@@ -40,6 +40,6 @@ class CowsController < ApplicationController
   end
 
   def cow_params
-    params.require(:cow).permit(:name, :description)
+    params.require(:cow).permit(:name, :description, :photo)
   end
 end
