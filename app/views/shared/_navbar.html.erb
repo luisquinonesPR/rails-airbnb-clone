@@ -1,10 +1,19 @@
 <div class="navbar-container">
   <ul class="navbar-items">
-    <li><strong>Home</strong></li>
-    <li><strong>Sign in</strong></li>
-    <li><strong>Create account</strong></li>
-    <%= link_to "Upload your Cow!", new_cow_path %>
-    <li><img src="https://kitt.lewagon.com/placeholder/users/ssaunier" /></li>
+    <%= link_to 'Home', root_path %>
+    <% if user_signed_in? %>
+      <%= link_to "Upload your Cow!", new_cow_path %>
+    <% end %>
 
+    <% if user_signed_in? %>
+      <div class="dropdown">
+      <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"/>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><%= link_to "Sign out", destroy_user_session_path, class: "dropdown-item", method: :delete %></li>
+        </ul>
+      </div>
+    <% else %>
+      <%=  link_to 'Sign in', new_user_session_path %>
+    <% end %>
   </ul>
 </div>
