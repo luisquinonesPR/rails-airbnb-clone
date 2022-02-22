@@ -2,16 +2,20 @@
   <div class="text-center">
     <h1>All our wonderful magnificents cows!</h1>
  </div>
+ <br>
 </div>
-  <div class="container py-5">
+  <div class="container py-5 cards">
     <div class="row">
      <% @cows.each do |cow| %>
-      <div class="co-12 col-sm-6 col-md-4">
+      <div class="col-12 col-sm-6 col-md-6 card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
        <%= cow.name %>
+       <br/>
         <%= link_to "See details", cow_path(cow), class: "btn btn-primary" %>
-          <div class="card-category"  %>
+          <div class="card-category">
       </div>
     </div>
     <% end %>
   </div>
 </div>
+
+ <div> <%= link_to 'Home page', root_path %></div>
