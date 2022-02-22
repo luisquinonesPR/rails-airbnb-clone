@@ -13,18 +13,17 @@ Booking.destroy_all
 Cow.destroy_all
 User.destroy_all
 
-#new_user = User.create!(email: "fakeemail@gmail.com", password: "")
+puts "database cleared"
 
-photos = [
-
-]
-
+user_client = User.create!(email: "user_client@gmail.com", password: "password")
+user_owner = User.create!(email: "user_owner@gmail.com", password: "password")
 30.times do
-  cow = Cow.create!(
-  name:Faker::GameOfThrones.character,
-	description: Faker::GameOfThrones.quote,
-  user: new_user
-  )
+  Cow.create!(
+  name:Faker::TvShows::GameOfThrones.character,
+	description: Faker::TvShows::GameOfThrones.quote,
+  user: user_owner
+ )
 
-  file = URI.open(photos.sample)
+  puts "seeding completed"
+
 end
