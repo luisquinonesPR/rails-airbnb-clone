@@ -1,6 +1,6 @@
 <div class="container">
   <div class="card-trip">
-    <img src="https://frontiersinblog.files.wordpress.com/2021/06/frontiers-bioengineering-biotechnology-cow-rumen-microbes-source-of-novel-enzymes-breaking-down-plastic-waste.jpg?w=1024" />
+    <%= cl_image_tag @cow.photo.key, height: 300, width: 400, crop: :fill %>
     <div class="card-trip-infos">
       <div>
           <h2><%= @cow.name %></h2>
