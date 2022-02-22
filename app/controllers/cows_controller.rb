@@ -4,6 +4,10 @@ class CowsController < ApplicationController
   def index
     @cows = Cow.all
   end
+  
+   def new
+    @cow = Cow.new
+  end
 
   def create
     @cow = Cow.new(cow_params)
@@ -15,10 +19,12 @@ class CowsController < ApplicationController
     end
   end
 
+
   def destroy
     @cow.destroy
     redirect_to root_path
   end
+
 
   def my_cows
     @cows = current_user.cows
@@ -31,6 +37,6 @@ class CowsController < ApplicationController
   end
 
   def cow_params
-    params.require(:cow).permit(:name, :description, :photo)
+    params.require(:cow).permit(:name, :description)
   end
 end
