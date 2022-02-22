@@ -1,13 +1,19 @@
 <div class="container">
   <div class="card-trip">
-    <%= cl_image_tag @cow.photo.key, height: 300, width: 400, crop: :fill %>
+
+  <% if @cow.photo.attached? %>
+    <%= cl_image_tag @cow.photo.key %>
     <div class="card-trip-infos">
       <div>
           <h2><%= @cow.name %></h2>
           <p><%= @cow.description %></p>
       </div>
       <div>
-        <a class="btn btn-ghost" href="#"><%= link_to "new_cow", "#", class: "btn btn-ghost" %>Book this COW!</a>
+    <%else%>
+      <h1>No picture</h1>
+    <% end %>
+
+        <a class="btn btn-ghost" href="#"><%= link_to "Book this COW!", new_cow_path, class: "btn btn-ghost" %></a>
       </div>
       <img src="" class="card-trip-user avatar-bordered" />
     </div>
