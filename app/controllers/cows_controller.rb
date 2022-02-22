@@ -5,7 +5,7 @@ class CowsController < ApplicationController
     @cows = Cow.all
   end
 
-   def new
+  def new
     @cow = Cow.new
   end
 
@@ -18,16 +18,14 @@ class CowsController < ApplicationController
       render :new
     end
   end
-  
+
   def show
   end
-
 
   def destroy
     @cow.destroy
     redirect_to root_path
   end
-
 
   def my_cows
     @cows = current_user.cows
