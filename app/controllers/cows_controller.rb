@@ -1,6 +1,10 @@
 class CowsController < ApplicationController
   before_action :set_cow, only: [:show, :edit, :update, :destroy]
-  
+
+  def index
+    @cows = Cow.all
+  end
+
   def create
     @cow = Cow.new(cow_params)
     @cow.user = current_user

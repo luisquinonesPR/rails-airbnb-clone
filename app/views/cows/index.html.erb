@@ -1,0 +1,19 @@
+<div class="cover mb-4 d-flex align-items-center justify-content-center">
+  <div class="text-center">
+    <h1>All our wonderful magnificents cows!</h1>
+ </div>
+</div>
+<div class="container py-5">
+  <div class="row">
+    <% @cows.each do |cow| %>
+      <div class="co-12 col-sm-6 col-md-4">
+        <%= link_to cow_path(cow), class: "text-decoration-none" do %>
+          <div class="card-category"  %>
+            <%= cow.name %>
+             <%= user.name %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
