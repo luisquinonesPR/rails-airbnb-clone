@@ -24,5 +24,5 @@ user_owner = User.create!(email: "user_owner@gmail.com", password: "password")
   user: user_owner
  )
 
-  puts "seeding completed"
 end
+puts "seeding completed"
