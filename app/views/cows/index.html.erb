@@ -8,6 +8,7 @@
      <% @cows.each do |cow| %>
       <div class="co-12 col-sm-6 col-md-4">
        <%= cow.name %>
+       <br/>
         <%= link_to "See details", cow_path(cow), class: "btn btn-primary" %>
           <div class="card-category"  %>
       </div>
