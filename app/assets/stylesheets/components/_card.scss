@@ -3,6 +3,7 @@
     background: white;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     margin-bottom: 50px;
+    margin-top: 20px;
   }
   
   .card-trip > img {
@@ -28,7 +29,7 @@
     color: beige;
     padding: 16px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-end;
     position: relative;
     background-color: #206923;

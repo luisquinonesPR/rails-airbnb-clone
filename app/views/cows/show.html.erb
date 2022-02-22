@@ -1,10 +1,13 @@
 <div class="container">
   <div class="card-trip">
-    <img src="" />
+    <img src="https://frontiersinblog.files.wordpress.com/2021/06/frontiers-bioengineering-biotechnology-cow-rumen-microbes-source-of-novel-enzymes-breaking-down-plastic-waste.jpg?w=1024" />
     <div class="card-trip-infos">
       <div>
           <h2><%= @cow.name %></h2>
           <p><%= @cow.description %></p>
+      </div>
+      <div>
+        <a class="btn btn-ghost" href="#"><%= link_to "new_cow", "#", class: "btn btn-ghost" %>Book this COW!</a>
       </div>
       <img src="" class="card-trip-user avatar-bordered" />
     </div>
