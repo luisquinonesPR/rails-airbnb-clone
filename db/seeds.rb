@@ -20,10 +20,9 @@ user_owner = User.create!(email: "user_owner@gmail.com", password: "password")
 30.times do
   Cow.create!(
   name:Faker::TvShows::GameOfThrones.character,
-	description: Faker::TvShows::GameOfThrones.quote,
+	description:Faker::TvShows::GameOfThrones.quote,
   user: user_owner
  )
 
   puts "seeding completed"
-
 end
