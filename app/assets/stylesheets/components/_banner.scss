@@ -1,29 +1,30 @@
 .banner {
   background-size: cover;
   background-position: bottom;
-  height: 500px;
+  height: 600px;
   padding: 150px 0;
-}
 
-.banner h1 {
-  font-family: 'Shizuru', cursive;
-  font-weight: bold;
-  font-size: 70px;
-  color: rgb(243, 235, 8);
-  text-align: right;
-  padding-top: 11px;
-  margin-right: 107px;
-  text-shadow: 3px 3px 1px rgba(226, 42, 17, 0.994);
-}
 
-.banner p {
-  font-family: 'Source Code Pro';
-  text-align: right;
-  font-size: 30px;
-  color: white;
-  width: 93%;
-  margin-top: -1px;
-  opacity: .7;
-  text-shadow: 1px 3px 2px rgba(0,0,0,0.2);
-}
+  h1 {
+    font-family: 'Shizuru', cursive;
+    font-weight: bold;
+    font-size: 70px;
+    color: rgb(243, 235, 8);
+    text-align: right;
+    padding-top: 1px;
+    margin-right: 129px;
+    text-shadow: 3px 3px 1px rgba(226, 42, 17, 0.994);
+  }
 
+  p {
+    font-family: 'Source Code Pro';
+    text-align: right;
+    font-size: 30px;
+    color: white;
+    width: 93%;
+    margin-top: -1px;
+    margin-bottom: 123px;
+    opacity: .7;
+    text-shadow: 1px 3px 2px rgba(0,0,0,0.2);
+  }
+}

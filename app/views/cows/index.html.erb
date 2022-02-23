@@ -1,6 +1,6 @@
 <div class="cover mb-4 d-flex align-items-center justify-content-center">
   <div class="text-center">
-    <h1>All our wonderful magnificents cows!</h1>
+    <h1>Get to know our wonderful magnificents cows!</h1>
  </div>
  <br>
 </div>
@@ -8,7 +8,8 @@
     <div class="row">
      <% @cows.each do |cow| %>
       <div class="col-12 col-sm-6 col-md-6 card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
-       <%= cow.name %>
+       <h2><%= cow.name %></h2>
+       <%= cl_image_tag cow.photo.key, height: 100, width: 100, crop: :fill %>
        <br/>
         <%= link_to "See details", cow_path(cow), class: "btn btn-primary" %>
           <div class="card-category">
