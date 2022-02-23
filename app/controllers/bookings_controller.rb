@@ -8,12 +8,12 @@ class BookingsController < ApplicationController
 
   def accept
     @booking = booking.find(params[:booking_id])
-    booking.status = accepted
+    booking.status = "accepted"
   end
 
   def reject
     @booking = Booking.find(params[:booking_id])
-    booking.status = rejected
+    booking.status = "rejected"
   end
 
   def create

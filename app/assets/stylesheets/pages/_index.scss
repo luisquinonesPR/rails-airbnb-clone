@@ -1,2 +1,21 @@
 // Import page-specific CSS files here.
 @import "home";
+.cows{
+    margin-bottom: 30px;
+}
+.buttom{
+        color: white;
+        border: 1px solid #4A4A4A;
+        padding: 8px 24px;
+        border-radius: 50px;
+        font-weight: lighter;
+        opacity: 0.6;
+        transition: opacity 0.3s ease;
+        background-color: #206923;
+        text-decoration: none;
+      
+      .btn-ghost:hover {
+        opacity: 1;
+        color: azure;
+      }
+}
