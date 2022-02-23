@@ -2,12 +2,15 @@
   <h2 class="text-center pb-3"><%= @cow.name %></h2>
 
   <%= simple_form_for @cow do |f| %>
-    <%= f.input :name %>
-    <%= f.input :description %>
-    <%= f.input :photo, as: :file %>
-
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+    <span class="form-control" id="inputGroup-sizing-lg"><%= f.input :name %></span>
+    <span class="form-control" id="inputGroup-sizing-lg"><%= f.input :description %></span>
+    </div>
+    <span class="" id="inputGroup-sizing-default"><%= f.input :photo, as: :file %></span>
+   </div>
     <div class="form-actions">
-      <%= f.button :submit, "Upload cow information", class: "text-black" %>
+      <%= f.button :submit, "Upload cow information", class: "text-black btn btn-primary btn btn-rounded justify-content-center" %>
     </div>
   <% end %>
 </div>
