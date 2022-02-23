@@ -2,7 +2,8 @@ class BookingsController < ApplicationController
   before_action :set_cow, only: [ :new, :create ]
 
   def index
-    @bookings = Booking.all.where(user_id: current_user.id)
+    @sent_bookings = current_user.sent_bookings
+    @received_bookings = current_user.received_bookings
   end
 
   def create
