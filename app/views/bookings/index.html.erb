@@ -2,15 +2,18 @@
   <div class="row tabs">
     <ul class="list-inline tabs-underlined">
       <li>
-      <a href="#" class="tab-underlined active">Bookings</a>
+      <a href="#" class="tab-underlined active">Sent Bookings</a>
         <div class="col-12 col-sm-6 col-md-6">
-          <% @sent_bookings.each do |cow| %>
-          <h2><%= cow.name %></h2>
+          <% @sent_bookings.each do |booking| %>
+          <h2><%= booking.cow.name %></h2>
           <% end %>
         </div>
       </li>
       <li>
         <a href="#" class="tab-underlined">Requests</a>
+        <% @received_bookings.each do |booking| %>
+          <h2><%= booking.cow.name %></h2>
+        <% end %>
       </li>
     </ul>
   </div>
