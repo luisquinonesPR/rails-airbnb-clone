@@ -9,7 +9,7 @@
     <% if user_signed_in? %>
       <div class="dropdown">
       <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"/>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <ul class="dropdown-menu my-dropdown" aria-labelledby="dropdownMenuButton1">
           <li><%= link_to "Sign out", destroy_user_session_path, class: "dropdown-item", method: :delete %></li>
         </ul>
       </div>
