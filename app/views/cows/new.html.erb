@@ -1,16 +1,12 @@
 <div class="container pt-5 col-md-5 form">
-  <h2 class="text-center pb-3"><%= @cow.name %></h2>
-
   <%= simple_form_for @cow do |f| %>
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-    <span class="form-control" id="inputGroup-sizing-lg"><%= f.input :name %></span>
-    <span class="form-control" id="inputGroup-sizing-lg"><%= f.input :description %></span>
-    </div>
-    <span class="" id="inputGroup-sizing-default"><%= f.input :photo, as: :file %></span>
-   </div>
-    <div class="form-actions">
-      <%= f.button :submit, "Upload cow information", class: "text-black btn btn-primary btn btn-rounded justify-content-center" %>
+    <div class="form-group">
+        <%= f.input :name, label: 'Name your cow:', class:'text-decoration-none' %>
+        <%= f.input :description, label: 'Describe your cow:', class:'text-decoration-none' %>
+        <%= f.input :photo, as: :file %>
+      <div class="form-actions d-flex justify-content-center mt-8" >
+         <%= f.button :submit, "Upload cow information", class: "text-white" %>
+      </div>
     </div>
   <% end %>
 </div>
