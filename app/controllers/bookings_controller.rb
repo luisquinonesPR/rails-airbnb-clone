@@ -6,6 +6,16 @@ class BookingsController < ApplicationController
     @received_bookings = current_user.received_bookings
   end
 
+  def accept
+    @booking = booking.find(params[:booking_id])
+    booking.status = accepted
+  end
+
+  def reject
+    @booking = Booking.find(params[:booking_id])
+    booking.status = rejected
+  end
+
   def create
     @booking = Booking.new(booking_params)
     @booking.cow = @cow
