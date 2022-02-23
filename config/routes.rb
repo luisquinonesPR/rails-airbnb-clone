@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :cows, except: [ :edit, :update ] do
     resources :bookings, only: [:new, :create ]
   end
-
+  # /bookings/id/accept
+  # /bookins/id/reject
 end
