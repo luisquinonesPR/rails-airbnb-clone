@@ -1,15 +1,18 @@
 .navbar-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   background-color: white;
+  padding-left: 30px
+
 }
 
 .navbar-items {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
-  width: 45%;
+  width: 90%;
   text-decoration: none;
+  margin-bottom: 5px;
 
   p {
     font-family: 'Source Code Pro';
@@ -23,6 +26,13 @@
     text-decoration: none;
     letter-spacing: -1px;
     font-size: 17px;
-    color: #1a1919;;
+    color: #1a1919;
+    padding: 0 3px;
+    margin: 0 3px;
   }
+}
+
+.my-dropdown {
+  background-color: #fcfafa;
+  border-radius: 8px;
 }
