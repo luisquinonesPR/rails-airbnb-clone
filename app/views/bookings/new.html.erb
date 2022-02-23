@@ -1,9 +1,11 @@
-<div class="text-center">
+<div class="container pt-5 col-md-5 form">
   <%= simple_form_for([@cow, @booking]) do |f| %>
-    <%= f.input :start_date %>
-    <%= f.input :end_date %>
+    <div class="form-group">
+     <%= f.input :start_date %>
+     <%= f.input :end_date %>
+  </div>
     <div class="form-actions">
-      <%= f.button :submit, "Book a cow", class: "text-black" %>
+      <%= f.button :submit, "Book a cow", class: "text-white" %>
     </div>
-  <% end %>
+    <% end %>
 </div>
