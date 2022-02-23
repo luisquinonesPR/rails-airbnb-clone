@@ -1,20 +1,22 @@
-<div class="container py-5 dashboard-container">
-  <div class="row tabs">
-    <ul class="list-inline tabs-underlined">
-      <li>
-      <a href="#" class="tab-underlined active">Sent Bookings</a>
-        <div class="col-12 col-sm-6 col-md-6">
-          <% @sent_bookings.each do |booking| %>
-          <h2><%= booking.cow.name %></h2>
-          <% end %>
-        </div>
-      </li>
-      <li>
-        <a href="#" class="tab-underlined">Requests</a>
-        <% @received_bookings.each do |booking| %>
-          <h2><%= booking.cow.name %></h2>
-        <% end %>
-      </li>
-    </ul>
+<div class="container">
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Sent bookings</button>
+      <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Requests</button>
+      <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+      <% @sent_bookings.each do |booking| %>
+        <h2><%= booking.cow.name %></h2>
+      <% end %>
+    </div>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+      <% @received_bookings.each do |booking| %>
+        <h2><%= booking.cow.name %></h2>
+      <% end %>
+    </div>
+    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
   </div>
 </div>

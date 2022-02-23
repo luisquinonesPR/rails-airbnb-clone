@@ -23,9 +23,10 @@ class BookingsController < ApplicationController
     @booking.cow = @cow
     @booking.user = current_user
     if @booking.save
-      redirect_to cow_bookings_path(@cow)
+      redirect_to bookings_path
     else
-      redirect_to cow_path(@cow)
+      flash[:alert] = "Cow has already been taken. Choose other dates"
+      render :new
     end
   end
 
