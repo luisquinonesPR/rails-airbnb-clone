@@ -7,12 +7,12 @@
   <div class="container py-5 cards">
     <div class="row">
      <% @cows.each do |cow| %>
-      <div class="col-12 col-sm-6 col-md-6 card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
-       <h2><%= cow.name %></h2>
-       <%= cl_image_tag cow.photo.key, height: 100, width: 100, crop: :fill %>
-       <br/>
-        <%= link_to "See details", cow_path(cow), class: "btn btn-primary" %>
-          <div class="card-category">
+      <div class="col-12 col-sm-6 col-md-6 card-category justify-content-space-between" >
+        <%= cl_image_tag cow.photo.key, height: 200, width: 300, crop: :fill %>
+         <br/>
+      <div class="card-category cows">
+        <h3><%= cow.name %></h3>
+        <%= link_to "See details", cow_path(cow), class: "buttom" %>
       </div>
     </div>
     <% end %>
