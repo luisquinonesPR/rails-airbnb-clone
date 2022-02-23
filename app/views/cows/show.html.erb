@@ -13,7 +13,8 @@
       <h1>No picture</h1>
     <% end %>
 
-        <a class="btn btn-ghost" href="#"><%= link_to "Book this COW!", new_cow_path, class: "btn btn-ghost" %></a>
+    <%= link_to "Book this COW!", new_cow_booking_path(@cow), class: "btn btn-ghost" %>
+
       </div>
       <img src="" class="card-trip-user avatar-bordered" />
     </div>
