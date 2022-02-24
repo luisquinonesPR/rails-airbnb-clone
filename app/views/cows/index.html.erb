@@ -2,15 +2,20 @@
   <div class="text-center">
     <h3>Get to know our wonderful magnificents cows!</h3>
 </div>
-<%= form_tag cows_path, method: :get do %>
+</div>
+<div class ="container d-flex">
+  <div>
+  <%= form_tag cows_path, method: :get do %>
   <%= text_field_tag :query,
     params[:query],
     class: "form-control",
     placeholder: "Find a cow"
   %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
- <br>
+  </div>
+  <div>
+  <%= submit_tag "Search", class: "btn btn-outline-primary" %>
+  </div>
+  <% end %>
 </div>
   <div class="container py-5 cards">
     <div class="row my-cards-container">
