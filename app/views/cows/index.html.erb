@@ -38,8 +38,14 @@
         </div>
       </div>
         <div class="col-5 map-container">
-        <h1>Aquí irá un mapa!!!</h1>
+          <div style="width: 100%; height: 600px; position: sticky; top: 20px;"
+            data-controller="mapbox"
+            data-mapbox-markers-value="<%= @markers.to_json %>"
+            data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
         </div>
     </div>
   </div>
 </div>
+ <div> <%= link_to 'Home page', root_path %></div>
+
+<!-- app/views/flats/index.html.erb -->

@@ -16,10 +16,14 @@
 @import "map";
 @import "footer";
 @import "card-show";
+@import "map";
+
+
 
 body{
   background-color: $light-gray;
 }
+
 
 h1 {
   font-size: 70px;

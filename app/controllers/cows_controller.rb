@@ -2,11 +2,18 @@ class CowsController < ApplicationController
   before_action :set_cow, only: [:show, :edit, :update, :destroy]
 
   def index
+    @cows = Cow.all
+    @markers = @cows.geocoded.map do |cow|
+      {
+        lat: cow.latitude,
+        lng: cow.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { cow: cow })
+      }
     if params[:query].present?
       sql_query = "name ILIKE :query OR description ILIKE :query"
       @cows = Cow.where(sql_query, query: "%#{params[:query]}%")
     else
-      @cows = Cow.all
+      @cows 
     end
   end
 
@@ -43,6 +50,6 @@ class CowsController < ApplicationController
   end
 
   def cow_params
-    params.require(:cow).permit(:name, :description, :photo)
+    params.require(:cow).permit(:name, :description, :photo, :address)
   end
 end
