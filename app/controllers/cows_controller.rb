@@ -2,7 +2,12 @@ class CowsController < ApplicationController
   before_action :set_cow, only: [:show, :edit, :update, :destroy]
 
   def index
-    @cows = Cow.all
+    if params[:query].present?
+      sql_query = "name ILIKE :query OR description ILIKE :query"
+      @cows = Cow.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @cows = Cow.all
+    end
   end
 
   def new
