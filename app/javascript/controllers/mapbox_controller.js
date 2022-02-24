@@ -18,3 +18,25 @@ export default class extends Controller {
 }
 
 
+// app/javascript/controllers/mapbox_controller.js
+// [ ... ]
+#addMarkersToMap() {
+  this.markersValue.forEach((marker) => {
+    const popup = new mapboxgl.Popup().setHTML(marker.info_window) // add this
+    new mapboxgl.Marker()
+      .setLngLat([ marker.lng, marker.lat ])
+      .setPopup(popup) // add this
+      .addTo(this.map)
+  });
+}
+
+import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder"
+// [...]
+  connect() {
+    // [...]
+    this.#addMarkersToMap()
+    this.#fitMapToMarkers()
+
+    this.map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
+                                        mapboxgl: mapboxgl }))
+  }
