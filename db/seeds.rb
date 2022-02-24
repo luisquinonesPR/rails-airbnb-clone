@@ -29,14 +29,17 @@ photos = ['https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?ixlib=rb
   'https://images.unsplash.com/photo-1556997685-309989c1aa82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2073&q=80'
 ]
 
-
+address = ["Carrer de Joaquim Ruyra, 9, 11, 08025 Barcelona", "Carrer de Bruniquer, 69, 08024 Barcelona", "Carrer de Torrijos, 47B, 08012 Barcelona",
+  "Carrer d'Aribau, 174, 08036 Barcelona","Pg. de Gràcia, 43, 08007 Barcelona", "Carrer del Rosselló, 307, 08037 Barcelona"]
 
 10.times do
   cow = Cow.create!(
+    address: address.sample,
     name:Faker::TvShows::GameOfThrones.character,
     description:Faker::TvShows::GameOfThrones.quote,
     user: user_owner
- )
+  )
+
   file = URI.open(photos.sample)
   cow.photo.attach(io: file, filename: cow.name, content_type: 'image/jpeg')
 end
