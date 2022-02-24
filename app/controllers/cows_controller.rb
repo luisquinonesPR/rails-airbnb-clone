@@ -9,7 +9,6 @@ class CowsController < ApplicationController
         lng: cow.longitude,
         info_window: render_to_string(partial: "info_window", locals: { cow: cow })
       }
-      end
     end
   end
 
@@ -46,6 +45,6 @@ class CowsController < ApplicationController
   end
 
   def cow_params
-    params.require(:cow).permit(:name, :description, :photo)
+    params.require(:cow).permit(:name, :description, :photo, :address)
   end
 end
