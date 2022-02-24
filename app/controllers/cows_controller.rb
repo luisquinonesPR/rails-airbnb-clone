@@ -3,6 +3,12 @@ class CowsController < ApplicationController
 
   def index
     @cows = Cow.all
+    @markers = @cows.geocoded.map do |cow|
+      {
+        lat: cow.latitude,
+        lng: cow.longitude
+      }
+
   end
 
   def new
