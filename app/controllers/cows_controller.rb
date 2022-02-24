@@ -9,6 +9,11 @@ class CowsController < ApplicationController
         lng: cow.longitude,
         info_window: render_to_string(partial: "info_window", locals: { cow: cow })
       }
+    if params[:query].present?
+      sql_query = "name ILIKE :query OR description ILIKE :query"
+      @cows = Cow.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @cows 
     end
   end
 

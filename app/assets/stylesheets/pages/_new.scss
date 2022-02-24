@@ -1,5 +1,5 @@
 .form {
-  background-color: white;
+  background-color: lightgray;
   font-family: 'Roboto Condensed', sans-serif;
   padding: 50px;
   margin: 40px auto;
@@ -10,7 +10,7 @@
 
 .form-actions {
   padding: 5px 20px;
-  background-color: blue;
+  background-color: $verde;
   text-align: center;
   color: white;
   border-radius: 10px;
