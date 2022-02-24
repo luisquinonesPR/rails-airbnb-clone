@@ -17,6 +17,9 @@
 @import "footer";
 @import "card-show";
 
+body{
+  background-color: $light-gray;
+}
 
 h1 {
   font-size: 70px;
