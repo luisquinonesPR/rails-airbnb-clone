@@ -6,9 +6,11 @@ class CowsController < ApplicationController
     @markers = @cows.geocoded.map do |cow|
       {
         lat: cow.latitude,
-        lng: cow.longitude
+        lng: cow.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { cow: cow })
       }
-
+      end
+    end
   end
 
   def new
