@@ -1,4 +1,14 @@
 #btn-home{
-    margin-left: 800px;
-    
+    margin-left: 700px;
+    padding: 25px 80px;
+    background-color: $verde-oscuro;
+    color: white;
+    border: 1px solid $verde-oscuro;
+    border-radius: 50px;
+    font-size: 30px;
+
+  
 }
+#btn-home:hover {
+    background-color: $verde;
+  }
