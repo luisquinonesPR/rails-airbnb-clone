@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2022_02_23_112208) do
     t.date "end_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "status", default: "pending"
+    t.integer "status", default: 0
     t.index ["cow_id"], name: "index_bookings_on_cow_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
