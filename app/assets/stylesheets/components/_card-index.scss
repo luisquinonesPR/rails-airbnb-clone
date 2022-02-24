@@ -1,11 +1,12 @@
 .my-cards-container {
   display: flex;
-  width: 95%;
+  flex-direction: column;
+  width: 90%;
   margin: 0 auto;
 }
 
 .my-card {
-  width: 45%;
+  width: 60%;
   background-color: white;
   padding-left: 0;
   padding-right: 0;
