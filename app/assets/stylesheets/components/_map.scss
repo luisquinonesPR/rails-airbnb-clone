@@ -6,4 +6,10 @@
 .mapboxgl-popup-content {
   text-align: center;
   font-family: "Open Sans", sans-serif;
+
+  .map-container {
+  border: solid red 1px;
+  height: 500px;
+  position: sticky;
+  top: 0;
 }
