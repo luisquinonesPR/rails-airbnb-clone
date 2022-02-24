@@ -18,19 +18,28 @@
   <% end %>
 </div>
   <div class="container py-5 cards">
-    <div class="row my-cards-container">
-     <% @cows.each do |cow| %>
-      <div class="col-12 col-sm-6 col-md-6 card-category justify-content-space-between my-card" >
-        <%= cl_image_tag cow.photo.key, height: 200, width: 300, crop: :fill %>
-         <br/>
-      <div class="card-category cows">
-        <h5><strong><%= cow.name %></strong></h5>
-        <p><%= cow.description %></p>
-        <%= link_to "See details", cow_path(cow), class: "button" %>
+    <div class="row">
+      <div class="col-7">
+        <div class="card-items">
+          <% @cows.each do |cow| %>
+              <%= link_to cow_path(cow) do %>
+                <div class="card-category my-card">
+                  <div class="card-image-container">
+                    <%= cl_image_tag cow.photo.key, class: "card-image", crop: :fill %>
+                  </div>
+                  <br/>
+                  <div class="card-category cows card-text">
+                    <h5><strong><%= cow.name %></strong></h5>
+                    <p><%= cow.description %></p>
+                  </div>
+                </div>
+              <% end %>
+          <% end %>
+        </div>
       </div>
+        <div class="col-5 map-container">
+        <h1>Aquí irá un mapa!!!</h1>
+        </div>
     </div>
-    <% end %>
   </div>
 </div>
-
- <div> <%= link_to 'Home page', root_path %></div>

@@ -3,19 +3,23 @@
 @import "avatar";
 @import "navbar";
 
-@import "card";
+// @import "card";
 
 @import "banner";
-@import "card";
+@import "card-index";
 @import "gost-button";
 
 @import "btn-home";
 @import "signin-btn";
 
 @import "dashboard";
+@import "map";
 @import "footer";
 @import "card-show";
 
+body{
+  background-color: $light-gray;
+}
 
 h1 {
   font-size: 70px;
@@ -24,6 +28,13 @@ h1 {
 h3, h5 {
   font-family: 'Source Code Pro';
   font-weight: bolder;
+  color: black;
+}
+
+p {
+  font-family: 'Source Code Pro';
+  font-weight: 400;
+  color: black;
 }
 
 a {

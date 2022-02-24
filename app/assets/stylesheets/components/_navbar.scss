@@ -1,11 +1,16 @@
 .navbar-container {
   display: flex;
-  justify-content: flex-start;
-  background-color: white;
+  justify-content: space-between;
+  background-color: whitesmoke;
   padding-left: 30px
+  
 
 }
 
+.navbar-container {
+  box-shadow: 1px 1px 10px #c3c3c3;;
+}
+.navbar-container
 .navbar-items {
   display: flex;
   justify-content: flex-end;
@@ -13,6 +18,8 @@
   width: 90%;
   text-decoration: none;
   margin-bottom: 5px;
+  height: 70px;
+  
 
   p {
     font-family: 'Source Code Pro';
