@@ -1,7 +1,7 @@
 <div class="container pt-5 col-md-5 form">
   <%= simple_form_for @cow do |f| %>
     <div class="form-group">
-        <%= f.input :name, label: 'Name your cow:', class:'text-decoration-none' %>
+        <%= f.input :name, label: 'What is the name of beloved cow ?:', class:'text-decoration-none' %>
         <%= f.input :description, label: 'Describe your cow:', class:'text-decoration-none' %>
         <%= f.input :photo, as: :file %>
         <%= f.input :address,
