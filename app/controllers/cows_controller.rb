@@ -2,7 +2,7 @@ class CowsController < ApplicationController
   before_action :set_cow, only: [:show, :edit, :update, :destroy]
 
   def index
-    @cows = Cow.all
+    @cows = Cow.where.not(user: current_user)
     @markers = @cows.geocoded.map do |cow|
       {
         lat: cow.latitude,
@@ -38,7 +38,7 @@ class CowsController < ApplicationController
 
   def destroy
     @cow.destroy
-    redirect_to root_path
+    redirect_to cows_path
   end
 
   def my_cows
