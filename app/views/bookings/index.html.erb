@@ -8,29 +8,41 @@
   <div class="tab-content" id="nav-tabContent">
     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
       <% @sent_bookings.each do |booking| %>
-        <div class="entry-booking">
-          <h3><%= booking.cow.name %></h3>
-          <h5><%= booking.cow.description %></h5>
-          <p><%= booking.start_date %></p>
-          <p><%= booking.end_date %></p>
-           <p><%= booking.status %></p>
+        <div class="card-booking">
+          <div class="image-container">
+            <%= cl_image_tag booking.cow.photo.key%>
+          </div>
+          <div class="booking-text">
+            <h3><%= booking.cow.name %></h3>
+            <p><%= booking.cow.description %></p>
+            <div class="dates">
+              <h5><%= booking.start_date %>  /</h5>
+              <h5><%= booking.end_date %></h5>
+            </div>
+            <p><%= booking.status %></p>
+          </div>
         </div>
       <% end %>
     </div>
     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
       <% @received_bookings.each do |booking| %>
-        <h2><%= booking.cow.name %></h2>
-      <% if booking.status == "pending" %>
-      <p class="space-description">You still have to accept or decline the booking.</p>
-      <%= link_to 'Accept', accept_cow_booking_path(booking.cow_id,booking.id), method: :patch, class: "btn-confirm-booking" %>
-      <%= link_to 'Decline', decline_cow_booking_path(booking.cow_id,booking.id), method: :patch, class: "btn-decline-booking" %>
-      <% elsif booking.status == "confirmed" %>
-      <%= link_to 'Cancel', decline_cow_booking_path(booking.cow_id,booking.id), method: :patch, class: "btn-decline-booking" %>
-      <p class="booking-status-details-text">You have confirmed this booking.</p>
-      <% else %>
-      <p class="booking-status-details-text">You have declined this booking.</p>
-      <% end %>
-    <% end %>
+        <div class="card-booking">
+          <div class="image-container">
+            <%= cl_image_tag booking.cow.photo.key%>
+          </div>
+          <div class="booking-text">
+            <h2><%= booking.cow.name %></h2>
+             <% if booking.status == "pending" %>
+              <p class="space-description">You still have to accept or decline the booking.</p>
+              <%= link_to 'Accept', accept_cow_booking_path(booking.cow_id,booking.id), method: :patch, class: "btn-confirm-booking" %>
+              <%= link_to 'Decline', decline_cow_booking_path(booking.cow_id,booking.id), method: :patch, class: "btn-decline-booking" %>
+              <% elsif booking.status == "confirmed" %>
+              <%= link_to 'Cancel', decline_cow_booking_path(booking.cow_id,booking.id), method: :patch, class: "btn-decline-booking" %>
+              <p class="booking-status-details-text">You have confirmed this booking.</p>
+              <% else %>
+              <p class="booking-status-details-text">You have declined this booking.</p>
+              <% end %>
+        <% end %>
   </div>
   <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
 </div>
