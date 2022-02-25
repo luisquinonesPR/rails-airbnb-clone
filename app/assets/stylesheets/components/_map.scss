@@ -1,6 +1,23 @@
-.map-container {
+// app/assets/stylesheets/components/_map.scss
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+
+  .map-container {
   border: solid red 1px;
   height: 500px;
   position: sticky;
   top: 0;
+  }
+}
+
+.mapboxgl-ctrl-geocoder {
+  max-width: none;
+  width: 100%;
+  border: 1px solid lightgrey;
+  box-shadow: none;
 }

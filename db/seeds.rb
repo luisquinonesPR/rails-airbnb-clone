@@ -30,7 +30,7 @@ photos = ['https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?ixlib=rb
 ]
 
 address = ["Carrer de Joaquim Ruyra, 9, 11, 08025 Barcelona", "Carrer de Bruniquer, 69, 08024 Barcelona", "Carrer de Torrijos, 47B, 08012 Barcelona",
-  "Carrer d'Aribau, 174, 08036 Barcelona","Pg. de Gràcia, 43, 08007 Barcelona", "Carrer del Rosselló, 307, 08037 Barcelona"]
+  "Carrer d'Aribau, 174, 08036 Barcelona","Pg. de Gràcia, 43, 08007 Barcelona", "Carrer del Rosselló, 307, 08037 Barcelona","Carrer del Taulat, 109, 08005 Barcelona", "Passeig de Picasso, 21, 08003 Barcelona"]
 
 10.times do
   cow = Cow.create!(

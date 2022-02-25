@@ -23,9 +23,9 @@
       <% if booking.status == "pending" %>
       <p class="space-description">You still have to accept or decline the booking.</p>
       <%= link_to 'Accept', accept_cow_booking_path(booking.cow_id,booking.id), method: :patch, class: "btn-confirm-booking" %>
-      <%= link_to 'Decline!', decline_cow_booking_path(booking.cow_id,booking.id), method: :patch, class: "btn-decline-booking" %>
+      <%= link_to 'Decline', decline_cow_booking_path(booking.cow_id,booking.id), method: :patch, class: "btn-decline-booking" %>
       <% elsif booking.status == "confirmed" %>
-      <%= link_to 'Cancel!', decline_cow_booking_path(booking.cow_id,booking.id), method: :patch, class: "btn-decline-booking" %>
+      <%= link_to 'Cancel', decline_cow_booking_path(booking.cow_id,booking.id), method: :patch, class: "btn-decline-booking" %>
       <p class="booking-status-details-text">You have confirmed this booking.</p>
       <% else %>
       <p class="booking-status-details-text">You have declined this booking.</p>
