@@ -33,6 +33,7 @@ gem "font-awesome-sass", "~> 5.15"
 gem "simple_form"
 gem "geocoder"
 
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
