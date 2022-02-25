@@ -1,4 +1,5 @@
 <div class="container pt-5 col-md-5 form">
+  <h2><%= @cow.name %></h2> 
   <%= simple_form_for([@cow, @booking]) do |f| %>
     <div class="form-group">
      <%= f.input :start_date %>
