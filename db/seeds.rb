@@ -17,6 +17,11 @@ puts "database cleared"
 
 user_client = User.create!(email: "user_client@gmail.com", password: "password")
 user_owner = User.create!(email: "user_owner@gmail.com", password: "password")
+owner_photo = URI.open('https://media-exp1.licdn.com/dms/image/C4D03AQELp7bJRzb9Aw/profile-displayphoto-shrink_200_200/0/1611674841725?e=1651104000&v=beta&t=rhXKn8wnhj7mDq1uBHHq0q-8uGMDM2DVxCarb3IaCYg')
+client_photo = URI.open('https://media-exp1.licdn.com/dms/image/C4D03AQE2dyWfAre7_A/profile-displayphoto-shrink_200_200/0/1641368252586?e=1651104000&v=beta&t=jlWiL6-iZr0roYIQIWWqsPniYPMn623Sgg4kVMKzgts')
+user_client.photo.attach(io: client_photo, filename: user_client.email, content_type: 'image/jpeg')
+user_owner.photo.attach(io: owner_photo, filename: user_owner.email, content_type: 'image/jpeg')
+
 photos = ['https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1088&q=80',
   'https://images.unsplash.com/photo-1583364428520-fa6c5013c0c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
   'https://images.unsplash.com/photo-1567454712317-27834ca8fce2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=702&q=80',
