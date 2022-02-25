@@ -1,8 +1,16 @@
 <div class="navbar-container">
 <%= link_to root_path do %>
-  <%= icon("fas", "cow") %>
+    <%= image_tag "vaca.png", class: "navbar-logo" %>
 <%end%>
   <div class="navbar-items">
+
+  
+    <button type="button" id="natvar-btn">
+      <% if user_signed_in? %>
+        <%= link_to "Bookings", bookings_path %>
+      <% end %>
+    </button>
+
     <button type="button" id="natvar-btn">
       <% if user_signed_in? %>
         <%= link_to "Upload your Cow!", new_cow_path %>

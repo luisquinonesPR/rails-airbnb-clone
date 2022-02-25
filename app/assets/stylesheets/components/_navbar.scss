@@ -6,8 +6,13 @@
 }
 
 .navbar-container {
-  box-shadow: 1px 1px 10px #c3c3c3;;
+  box-shadow: 1px 1px 10px #c3c3c3;
 }
+
+.navbar-logo {
+  height: 70px;
+}
+
 .navbar-container
 .navbar-items {
   display: flex;
@@ -41,3 +46,4 @@
   background-color: #fcfafa;
   border-radius: 8px;
 }
+
