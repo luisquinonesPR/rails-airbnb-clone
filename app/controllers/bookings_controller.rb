@@ -5,8 +5,6 @@ class BookingsController < ApplicationController
   def index
     @sent_bookings = current_user.sent_bookings
     @received_bookings = current_user.received_bookings
-
-    @accepted_bookings = @received_bookings.where(status: "accepted")
   end
 
   def accept
