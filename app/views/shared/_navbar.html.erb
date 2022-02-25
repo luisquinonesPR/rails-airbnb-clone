@@ -3,7 +3,7 @@
   <%= icon("fas", "cow") %>
 <%end%>
   <div class="navbar-items">
-    <button type="button" class="natvar-btn">
+    <button type="button" id="natvar-btn">
       <% if user_signed_in? %>
         <%= link_to "Upload your Cow!", new_cow_path %>
       <% end %>
@@ -16,7 +16,7 @@
         </ul>
       </div>
     <% else %>
-    <button type="button" class="natvar-btn">
+    <button type="button" id="natvar-btn">
       <%=  link_to 'Sign in', new_user_session_path %>
     </button>
     <% end %>

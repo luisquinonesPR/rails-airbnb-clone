@@ -1,14 +1,19 @@
 #btn-home{
-    margin-left: 700px;
-    padding: 25px 80px;
-    background-color: $verde-oscuro;
+
+    padding: 10px 150px;
+    background-color: $verde;
     color: white;
     border: 1px solid $verde-oscuro;
-    border-radius: 50px;
+    border-radius: 15px;
+    font-weight: normal;
     font-size: 30px;
-
-  
+    transition-property: font-size;
+    transition-duration: 1s;
+    margin-bottom: 40px;
 }
+
 #btn-home:hover {
     background-color: $verde;
+    font-size: 31px;
+    font-weight: bold;
   }

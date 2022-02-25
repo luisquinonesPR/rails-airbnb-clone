@@ -1,14 +1,16 @@
-.natvar-btn {
-    color: $verde-oscuro;
-    border: 1px solid $verde-oscuro;
-    padding: 8px 24px;
-    border-radius: 15px;
-    border: 1px solid $verde-oscuro;
-    font-weight: normal;
+#natvar-btn {
+  color: $verde;
+  padding: 8px 24px;
+  margin-right: 25px;
+  border-radius: 10px;
+  border: 1px solid $verde-oscuro;
+  font-weight: normal;
+  color: $verde-oscuro;
 
-  }
+}
 
-  .natvar-btn:hover {
-    font-weight: bold;
-    color: white;
-  }
+#natvar-btn:hover {
+
+  font-weight: bold;
+  color: white;
+}
