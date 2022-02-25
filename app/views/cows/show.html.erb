@@ -1,25 +1,28 @@
-<div class="container">
-  <div class="card-trip">
+<div class="show-main-container"> 
+  <div class="container">
+    <div class="card-trip">
 
-  <% if @cow.photo.attached? %>
-    <%= cl_image_tag @cow.photo.key %>
-    <div class="card-trip-infos">
-      <div>
-          <h2><%= @cow.name %></h2>
-          <p><%= @cow.description %></p>
-      </div>
-      <div>
-    <%else%>
-      <h1>No picture</h1>
-    <% end %>
+    <% if @cow.photo.attached? %>
+      <%= cl_image_tag @cow.photo.key %>
+      <div class="card-trip-infos">
+        <div>
+            <h2><%= @cow.name %></h2>
+            <p><%= @cow.description %></p>
+        </div>
+        <div>
+      <%else%>
+        <h1>No picture</h1>
+      <% end %>
 
-    <% if @cow.user == current_user %>
-       <%= link_to "Delete this COW!", cow_path(@cow), method: :delete, class: "btn btn-ghost"  %>
-    <% else %>
-    <%= link_to "Book this COW!", new_cow_booking_path(@cow), class: "btn btn-ghost" %>
-    <% end %>
+      <% if @cow.user == current_user %>
+        <%= link_to "Delete this COW!", cow_path(@cow), method: :delete, class: "btn btn-ghost"  %>
+      <% else %>
+      <%= link_to "Book this COW!", new_cow_booking_path(@cow), class: "btn btn-ghost" %>
+      <% end %>
+        </div>
+        <img src="" class="card-trip-user avatar-bordered" />
       </div>
-      <img src="" class="card-trip-user avatar-bordered" />
     </div>
   </div>
 </div>
+
