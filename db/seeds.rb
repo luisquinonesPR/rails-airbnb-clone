@@ -9,9 +9,10 @@
 require "open-uri"
 require "faker"
 
-Booking.destroy_all
-Cow.destroy_all
+Restaurant.destroy_all
+# Favourite.destroy_all
 User.destroy_all
+# Review.destroy_all
 
 puts "database cleared"
 

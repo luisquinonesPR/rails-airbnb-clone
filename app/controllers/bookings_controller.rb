@@ -9,12 +9,12 @@ class BookingsController < ApplicationController
 
   def accept
     @booking.confirmed!
-    redirect_to bookings_path, notice: "You have successfully confirmed this booking request"
+    redirect_to bookings_path
   end
 
   def decline
     @booking.declined!
-    redirect_to bookings_path, notice: "You have declined this booking request"
+    redirect_to bookings_path
   end
 
   def create
