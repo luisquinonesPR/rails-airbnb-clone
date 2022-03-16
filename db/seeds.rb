@@ -16,7 +16,7 @@ puts "database cleared"
 user_client = User.create!(email: "user_client@gmail.com", password: "password")
 user_owner = User.create!(email: "user_owner@gmail.com", password: "password")
 owner_photo = URI.open('https://media-exp1.licdn.com/dms/image/C4D03AQELp7bJRzb9Aw/profile-displayphoto-shrink_200_200/0/1611674841725?e=1651104000&v=beta&t=rhXKn8wnhj7mDq1uBHHq0q-8uGMDM2DVxCarb3IaCYg')
-client_photo = URI.open('https://media-exp1.licdn.com/dms/image/C4D03AQE2dyWfAre7_A/profile-displayphoto-shrink_200_200/0/1641368252586?e=1651104000&v=beta&t=jlWiL6-iZr0roYIQIWWqsPniYPMn623Sgg4kVMKzgts')
+client_photo = URI.open('https://media-exp1.licdn.com/dms/image/C4E03AQGnM1z6gmOEIA/profile-displayphoto-shrink_800_800/0/1647289990541?e=1652918400&v=beta&t=kU3A7Mx4UgbAvnVlqYcxcAWULvxHs5qBStWGIvD_oak')
 user_client.photo.attach(io: client_photo, filename: user_client.email, content_type: 'image/jpeg')
 user_owner.photo.attach(io: owner_photo, filename: user_owner.email, content_type: 'image/jpeg')
 
