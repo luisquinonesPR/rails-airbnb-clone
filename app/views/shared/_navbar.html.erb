@@ -1,21 +1,18 @@
 <div class="navbar-container">
-<%= link_to root_path do %>
+  <%= link_to root_path do %>
     <%= image_tag "vaca.png", class: "navbar-logo" %>
-<%end%>
+  <%end%>
   <div class="navbar-items">
-
-  
+    <% if user_signed_in? %>
     <button type="button" id="natvar-btn">
-      <% if user_signed_in? %>
         <%= link_to "Bookings", bookings_path %>
-      <% end %>
     </button>
-
+     <% end %>
+    <% if user_signed_in? %>
     <button type="button" id="natvar-btn">
-      <% if user_signed_in? %>
         <%= link_to "Upload your Cow!", new_cow_path %>
-      <% end %>
     </button>
+     <% end %>
     <% if user_signed_in? %>
       <div class="dropdown">
       <% if current_user.photo.attached? %>
